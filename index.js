@@ -86,3 +86,22 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+
+//pseudo code
+
+var totalMonths = finances.length;
+
+//defining baseline
+//intial value 
+var netProfit = finances [0][1];
+//a loop to add each month value using finances length to control how many loops
+for (let i = 1; i < finances.length; i++){
+netProfit = finances [i][1] + netProfit;
+}
+
+var AvgChange = netProfit / finances.length
+
+
+
+
