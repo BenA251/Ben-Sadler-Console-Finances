@@ -95,6 +95,8 @@ var netProfit = finances [0][1];
 var valueDifference = 0;
 var valueDifferenceCompound = 0;
 var averageChange = 0;
+var highestValue = finances [0][1];
+var lowestValue = finances [0][1];
 
 //a loop to print list of values such able to verify calculations using third party software disabled in final console view.
 //for (let i = 0; i < finances.length; i++){
@@ -109,9 +111,24 @@ for (let i = 1; i < finances.length; i++){
 netProfit = finances [i][1] + netProfit;
 valueDifference = finances [i][1] - finances [i-1][1];
 valueDifferenceCompound = valueDifference + valueDifferenceCompound;
+
 }
 
+//if (finances [i][1] > highestValue) { 
+  //highestValue = finances [i][1]; 
+  //}
+  //else (finances [i][1] = highestValue)
+ // highestValue = highestValue; 
+
+
+
+
+
 averageChange = valueDifferenceCompound / (finances.length - 1)
+
+
+
+console.log (highestValue)
 
 
 console.log 
@@ -119,7 +136,7 @@ console.log
 ----------------
 Total Months: ${totalMonths}
 Total: $${netProfit}
-Average Change: ${averageChange}
+Average Change: ${averageChange.toFixed(2)}
 Greatest Increase in Profits/Losses:
 Greatest Decrease in Profits/Losses:
 `)
