@@ -87,7 +87,15 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-//intial values 
+//a loop to print list of values such able to verify calculations using third party software disabled in final console view.
+//for (let i = 0; i < finances.length; i++){
+//numberList  =  numberList + `${finances [i][1]}\n`
+// }
+//console.log (numberList)
+
+
+
+//intial const & variables 
 
 const totalMonths = finances.length;
 var numberList = "number list:\n"
@@ -97,12 +105,10 @@ var valueDifferenceCompound = 0;
 var averageChange = 0;
 var highestValueChange = 0;
 var lowestValueChange = 0;
+var highestValueChangeDate = finances [0][0];
+var lowestValueChangeDate = finances [0][0];
 
-//a loop to print list of values such able to verify calculations using third party software disabled in final console view.
-//for (let i = 0; i < finances.length; i++){
-//numberList  =  numberList + `${finances [i][1]}\n`
-// }
-//console.log (numberList)
+
 
 
 
@@ -111,13 +117,14 @@ for (let i = 1; i < finances.length; i++){
   valueDifference = finances [i][1] - finances [i-1][1];
   valueDifferenceCompound = valueDifference + valueDifferenceCompound;
  if (valueDifference > highestValueChange) { 
-    highestValueChange = valueDifference; 
+    highestValueChange = valueDifference;
+    highestValueChangeDate = finances [i][0];
   } 
   else if (valueDifference < lowestValueChange){ 
-  lowestValueChange = valueDifference; 
+  lowestValueChange = valueDifference;
+  lowestValueChangeDate = finances [i][0]; 
 }
 }
-//loop works but doing wrong values to determine highest and lowest wrong range need to look at change values!
 
 averageChange = valueDifferenceCompound / (finances.length - 1)
 
@@ -130,8 +137,8 @@ console.log
   Total Months: ${totalMonths}
   Total: $${netProfit}
   Average Change: ${averageChange.toFixed(2)}
-  Greatest Increase in Profits/Losses: ${highestValueChange}
-  Greatest Decrease in Profits/Losses: ${lowestValueChange}
+  Greatest Increase in Profits/Losses: ${highestValueChangeDate} ($${highestValueChange})
+  Greatest Decrease in Profits/Losses: ${lowestValueChangeDate} ($${lowestValueChange})
   `)
 
 
