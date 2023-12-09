@@ -87,21 +87,37 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
-//pseudo code
-
-var totalMonths = finances.length;
-
-//defining baseline
 //intial value 
-var netProfit = finances [0][1];
-//a loop to add each month value using finances length to control how many loops
-for (let i = 1; i < finances.length; i++){
+
+const totalMonths = finances.length;
+var numberList = "number list:\n"
+var netProfit = 0;
+
+//a loop to print list of values such able to verify calculations using third party software disabled in final console view.
+//for (let i = 0; i < finances.length; i++){
+//numberList  =  numberList + `${finances [i][1]}\n`
+// }
+//console.log (numberList)
+
+
+//a loop to print list of values such able to verify calculations using third party software
+
+for (let i = 0; i < finances.length; i++){
 netProfit = finances [i][1] + netProfit;
 }
 
-var AvgChange = netProfit / finances.length
 
 
 
 
+
+
+console.log 
+(`Financial Analysis
+----------------
+Total Months: ${totalMonths}
+Total: $${netProfit}
+Average Change:
+Greatest Increase in Profits/Losses:
+Greatest Decrease in Profits/Losses:
+`)
