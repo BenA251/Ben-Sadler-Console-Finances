@@ -91,7 +91,10 @@ var finances = [
 
 const totalMonths = finances.length;
 var numberList = "number list:\n"
-var netProfit = 0;
+var netProfit = finances [0][1];
+var valueDifference = 0;
+var valueDifferenceCompound = 0;
+var averageChange = 0;
 
 //a loop to print list of values such able to verify calculations using third party software disabled in final console view.
 //for (let i = 0; i < finances.length; i++){
@@ -102,14 +105,13 @@ var netProfit = 0;
 
 //a loop to print list of values such able to verify calculations using third party software
 
-for (let i = 0; i < finances.length; i++){
+for (let i = 1; i < finances.length; i++){
 netProfit = finances [i][1] + netProfit;
+valueDifference = finances [i][1] - finances [i-1][1];
+valueDifferenceCompound = valueDifference + valueDifferenceCompound;
 }
 
-
-
-
-
+averageChange = valueDifferenceCompound / (finances.length - 1)
 
 
 console.log 
@@ -117,7 +119,7 @@ console.log
 ----------------
 Total Months: ${totalMonths}
 Total: $${netProfit}
-Average Change:
+Average Change: ${averageChange}
 Greatest Increase in Profits/Losses:
 Greatest Decrease in Profits/Losses:
 `)
