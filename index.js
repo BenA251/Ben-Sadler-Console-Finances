@@ -95,8 +95,8 @@ var netProfit = finances [0][1];
 var valueDifference = 0;
 var valueDifferenceCompound = 0;
 var averageChange = 0;
-var highestValue = finances [0][1];
-var lowestValue = finances [0][1];
+var highestValueChange = 0;
+var lowestValueChange = 0;
 
 //a loop to print list of values such able to verify calculations using third party software disabled in final console view.
 //for (let i = 0; i < finances.length; i++){
@@ -110,11 +110,11 @@ for (let i = 1; i < finances.length; i++){
   netProfit = finances [i][1] + netProfit;
   valueDifference = finances [i][1] - finances [i-1][1];
   valueDifferenceCompound = valueDifference + valueDifferenceCompound;
- if (finances [i][1] > highestValue) { 
-    highestValue = finances [i][1]; 
+ if (valueDifference > highestValueChange) { 
+    highestValueChange = valueDifference; 
   } 
-  else if (finances [i][1] < lowestValue){ 
-  lowestValue = finances [i][1]; 
+  else if (valueDifference < lowestValueChange){ 
+  lowestValueChange = valueDifference; 
 }
 }
 //loop works but doing wrong values to determine highest and lowest wrong range need to look at change values!
@@ -123,8 +123,6 @@ averageChange = valueDifferenceCompound / (finances.length - 1)
 
 
 
-console.log (highestValue)
-
 
 console.log 
   (`Financial Analysis
@@ -132,8 +130,8 @@ console.log
   Total Months: ${totalMonths}
   Total: $${netProfit}
   Average Change: ${averageChange.toFixed(2)}
-  Greatest Increase in Profits/Losses: ${highestValue}
-  Greatest Decrease in Profits/Losses: ${lowestValue}
+  Greatest Increase in Profits/Losses: ${highestValueChange}
+  Greatest Decrease in Profits/Losses: ${lowestValueChange}
   `)
 
 
