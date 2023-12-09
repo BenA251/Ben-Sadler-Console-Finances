@@ -1,14 +1,15 @@
-# Console-Finances
+# Ben-Sadler-Console-Finances
 
 ## Description 
 
 In this challenge, you'll be using the concepts you've learned to complete the required activity. This activity presents a real-world situation in which your newfound JavaScript skills will come in handy. You are tasked with creating code for analyzing the financial records of a company. You have been provided with a financial dataset in the `starter/index.js` file.
+
 The project User Story & acceptance criteria are as follows:
 
 <ins>User Story </ins> <br><br>
 AS A Trainee Front End Web developer
-I WANT a Portfolio which will showcase me and my Projects
-SO THAT potential employers can see what I can do.
+I WANT to create a script file using Javascript which processes financial data in an existing array including outputting data requested in acceptance criteria. 
+
 
 <ins>The Acceptance Criteria </ins> <br>
 1. Create a new GitHub repo called `Console-Finances`. Then, clone it to your computer.
@@ -54,41 +55,29 @@ Your final code should print the analysis to the console.
 * How do you only print to the nearest 100th in JavaScript?
 The following animation shows the web application's required (similar) appearance and functionality:
 
-![alt text](assets/Images/01-css-challenge-demo.gif)
 
 <strong>Links</strong>
 
-Website: https://bena251.github.io/Ben-Sadler-Portfolio/ <br>
-Website Repository: https://github.com/BenA251/Ben-Sadler-Portfolio
+Website: https://bena251.github.io/Ben-Sadler-Console-Finances/ <br>
+Website Repository: https://github.com/BenA251/Ben-Sadler-Console-Finances
 
 
 ## Usage 
 
-A Personal Portfolio page,
+To view results:
 
-The links on top navigation bar can be used to jump to specific sections within homepage.
+Right Click Webpage > select 'Inspect' > select 'Console' Tab > view results.
 
 
-<strong>Homepage Screenshot:</strong> <br>
 
-![alt text](assets/Images/Screenshot.png)
+<strong>Console Screenshot:</strong> <br>
+
+![alt text](./assets/Screenshot.png)
 
 
 ## Credits
 
 Challenge/Project Material was provided by course. 
-
-Images sources (free stock images)
-
-https://www.pexels.com/photo/tumbler-beside-black-dslr-camera-lens-2442888/
-https://www.pexels.com/photo/close-up-photo-of-programming-of-codes-546819/
-https://www.pexels.com/search/study/
-https://www.pexels.com/search/coming%20soon/
-https://pixabay.com/vectors/avatar-icon-placeholder-facebook-1577909/
-
-About Me Template
-
-https://static1.squarespace.com/static/55c5193be4b0620bb2eae3e3/t/5e7921780e6b0d31465a907f/1584996728642/PassionToPaid_Resource_AboutMe.pdf 
 
 
 ## License
