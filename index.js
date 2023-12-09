@@ -87,7 +87,7 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-//intial value 
+//intial values 
 
 const totalMonths = finances.length;
 var numberList = "number list:\n"
@@ -105,24 +105,19 @@ var lowestValue = finances [0][1];
 //console.log (numberList)
 
 
-//a loop to print list of values such able to verify calculations using third party software
 
 for (let i = 1; i < finances.length; i++){
-netProfit = finances [i][1] + netProfit;
-valueDifference = finances [i][1] - finances [i-1][1];
-valueDifferenceCompound = valueDifference + valueDifferenceCompound;
-
+  netProfit = finances [i][1] + netProfit;
+  valueDifference = finances [i][1] - finances [i-1][1];
+  valueDifferenceCompound = valueDifference + valueDifferenceCompound;
+ if (finances [i][1] > highestValue) { 
+    highestValue = finances [i][1]; 
+  } 
+  else if (finances [i][1] < lowestValue){ 
+  lowestValue = finances [i][1]; 
 }
-
-//if (finances [i][1] > highestValue) { 
-  //highestValue = finances [i][1]; 
-  //}
-  //else (finances [i][1] = highestValue)
- // highestValue = highestValue; 
-
-
-
-
+}
+//loop works but doing wrong values to determine highest and lowest wrong range need to look at change values!
 
 averageChange = valueDifferenceCompound / (finances.length - 1)
 
@@ -132,11 +127,15 @@ console.log (highestValue)
 
 
 console.log 
-(`Financial Analysis
-----------------
-Total Months: ${totalMonths}
-Total: $${netProfit}
-Average Change: ${averageChange.toFixed(2)}
-Greatest Increase in Profits/Losses:
-Greatest Decrease in Profits/Losses:
-`)
+  (`Financial Analysis
+  ----------------
+  Total Months: ${totalMonths}
+  Total: $${netProfit}
+  Average Change: ${averageChange.toFixed(2)}
+  Greatest Increase in Profits/Losses: ${highestValue}
+  Greatest Decrease in Profits/Losses: ${lowestValue}
+  `)
+
+
+
+
